@@ -57,6 +57,15 @@ class TestElectricCar(unittest.TestCase):
        self.assertEqual(car.calculate_range(), 150)
 
  
+class junghoCar(Vehicle):
+    
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def runCar():
+        print("Jungho's Car is Running")
 
 if __name__ == '__main__':
 
@@ -137,6 +146,10 @@ class Testcalc(unittest.TestCase):
         self.assertEqual(calc.divide(-1, 1), -1)
 
         self.assertEqual(calc.divide(-1, -1), 1)
+
+    def test_JunghoCar(self):
+        jc = junghoCar()
+        self.assertEqual("Jungho's Car is Running", jc.runCar())
 
  
 
